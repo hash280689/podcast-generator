@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 #Update apt-get to get things into ubuntu
 #Uses \ to run multiple commands under one Run commanf
-RUN apt-get update && intall -y \
+RUN apt-get update && install -y \
     python3.10 \
     python3-pip \
     git
