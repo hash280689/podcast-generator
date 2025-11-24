@@ -1,11 +1,14 @@
 FROM ubuntu:latest
 
 #Update apt-get to get things into ubuntu
-#Uses \ to run multiple commands under one Run commanf
-RUN apt-get update && apt-get install -y build-essential libyaml-dev python3-dev &&  && rm -rf /var/lib/apt/lists/* \
+
+#Uses \ to run multiple commands under one Run command
+RUN apt-get update && apt-get install -y \
     python3.10 \
     python3-pip \
     git
+
+RUN apt-get update && apt-get install -y build-essential libyaml-dev python3-dev && rm -rf /var/lib/apt/lists/*
 
 RUN pip3 install PyYAML
 
