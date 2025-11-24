@@ -1,0 +1,22 @@
+name: "Podcast Generator"
+author: "HASH"
+description: "Generates a feed for a podacast from a YAML file"
+
+#Run the Docker file we made earlier
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+#use the default branding icon
+branding:
+  icon: "git-branch"
+  color: "red"
+inputs:
+  email:
+    description: "The commiter's email address"
+    required: true
+    default: ${{ github.actor }}@localhost
+  name:
+    description: "The commiter's name"
+    required: true
+    default: ${{ github.actor }}
