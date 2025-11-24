@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN apt-get update && apt-get install -y build-essential libyaml-dev python3-dev && rm -rf /var/lib/apt/lists/*
 
-RUN pip3 install PyYAML==6.0.1
+RUN python:slim pip install PyYAML==6.0.1
 
 #COPY Files from repo to docker image
 COPY feed.py /usr/bin/feed.py
