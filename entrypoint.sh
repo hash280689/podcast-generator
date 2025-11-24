@@ -1,5 +1,5 @@
 #!/bin/bash
-
+#Don't forget to run  chmod -R 775 entrypoint.sh to allow read-write permissions
 echo "=================="
 
 #Use GITHUB_ACTOR to get name of user running the action
