@@ -1,4 +1,4 @@
-name: "Podcast Generator"
+name: "Podcast Generator HASH"
 author: "HASH"
 description: "Generates a feed for a podacast from a YAML file"
 
