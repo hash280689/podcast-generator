@@ -2,12 +2,12 @@ FROM ubuntu:latest
 
 #Update apt-get to get things into ubuntu
 #Uses \ to run multiple commands under one Run commanf
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y build-essential libyaml-dev python3-dev &&  && rm -rf /var/lib/apt/lists/* \
     python3.10 \
     python3-pip \
     git
 
-RUN pip install PyYAML
+RUN pip3 install PyYAML
 
 #COPY Files from repo to docker image
 COPY feed.py /usr/bin/feed.py
