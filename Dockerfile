@@ -1,13 +1,9 @@
-FROM ubuntu:latest
+FROM python:3.10-slim
 
-RUN apt-get update && apt-get install -y \
-    python3 \
-    python3-pip \
-    ca-certificates \
-    git \
+RUN apt-get update && apt-get install -y git \
  && rm -rf /var/lib/apt/lists/*
 
-RUN python3 -m pip install --no-cache-dir PyYAML
+RUN pip install --no-cache-dir PyYAML
 
 COPY feed.py /usr/bin/feed.py
 COPY entrypoint.sh /entrypoint.sh
